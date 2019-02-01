@@ -19,7 +19,7 @@ const controller = {
       controller.setValue
     );
 
-    return { progress: 0, url: null };
+    return { progress: 0, url: null, data: {} };
   }
 };
 
