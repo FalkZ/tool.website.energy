@@ -1,9 +1,35 @@
+html {
+    background: #001f3e;
+}
+
 body {
-    font-family: 'open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-weight: 300;
 }
 
 input {
+    color: white;
+    font-weight: 200;
+    box-sizing: border-box;
     width: 100%;
+    background: rgba(white, 0.2);
+    padding: 15px;
+    font-size: 24px;
+    text-align: center;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+}
+
+::-webkit-input-placeholder {
+    color: rgba(white, 0.1);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    float: right;
 }
 
 div {
@@ -13,4 +39,75 @@ div {
 .result {
     font-size: 30px;
     text-align: center;
+}
+
+#bar {
+    height: 5px;
+    background: white;
+    border-radius: 5px;
+    display: block;
+    transition: width 1s ease-out;
+    margin-top: -5px;
+}
+
+main {
+    display: table;
+    margin: 20vh auto;
+}
+
+#display {
+    font-size: 25px;
+    margin: 34px 0;
+    width: 100%;
+
+    div {
+        display: inline-block;
+        text-align: right;
+        width: 40%;
+        font-weight: bold;
+
+        &:first-child {
+            text-align: left;
+        }
+    }
+}
+
+#background {
+    transform: rotate(180deg);
+    display: block;
+    filter: blur(30px) saturate(130%);
+    position: fixed;
+    z-index: -2;
+    top: -10vh;
+    left: 0;
+    right: 0;
+    height: 200vh;
+    width: 100%;
+    bottom: -80vh;
+}
+
+#wrapper {
+    display: none;
+
+    &.show {
+        display: contents;
+    }
+}
+
+#message {
+    display: none;
+    padding-top: 20px;
+    text-align: center;
+
+    &.show {
+        display: block;
+    }
+}
+
+#zap {
+    margin: 10px 20px;
+}
+
+p {
+    font-size: 14px;
 }
