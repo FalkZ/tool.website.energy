@@ -3,7 +3,8 @@
     "passepartout": "0.0.8"
   },
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "devDependencies": {
     "stylus": "^0.54.5"
