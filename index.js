@@ -25,7 +25,7 @@ const controller = {
 
 const bar = ({ model }) => {
   let value = model.progress * 1.8;
-  if (model.url) {
+  if (value > 100 || model.url) {
     value = 100;
   }
   return [{ id: 'bar', style: { width: value + '%' } }];
